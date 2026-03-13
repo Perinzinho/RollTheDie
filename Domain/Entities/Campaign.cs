@@ -16,7 +16,7 @@ namespace RollTheDie.Domain.Entities
 
         public Campaign(string name, string description)
         {
-            Id = Guid.NewGuid();  // Gera um Guid único
+            Id = Guid.NewGuid(); 
             Name = name;
             Description = description;
         }
