@@ -1,0 +1,6 @@
+@RollTheDie_HostAddress = http://localhost:5056
+
+GET {{RollTheDie_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
