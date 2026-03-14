@@ -1,14 +1,15 @@
-﻿using System;
+﻿using RollTheDie.Domain.Entities;
 
-/// <summary>
-/// Summary description for Class1
-/// </summary>
-public class Class1
+namespace RollTheDie.Domain.Interfaces
 {
-	public Class1()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public interface ICharacterAttributeRepository
+    {
+        Task<CharacterAttribute?> GetByCharacterId(Guid characterId);
+
+        Task Create(CharacterAttribute attributes);
+
+        Task Update(CharacterAttribute attributes);//Deve ser Patch, não pode ser PUT
+
+        Task Delete(Guid characterId);
+    }
 }
