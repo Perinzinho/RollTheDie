@@ -3,7 +3,7 @@
 namespace RollTheDie.Domain.Interfaces
 {
     public interface ICharacterAttributeRepository
-    {
+    {//Porquê aqui é categorizado como task?
         Task<CharacterAttribute?> GetByCharacterId(Guid characterId);
 
         Task Create(CharacterAttribute attributes);
