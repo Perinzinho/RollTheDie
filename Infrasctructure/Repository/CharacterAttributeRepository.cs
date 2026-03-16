@@ -1,7 +1,7 @@
 ﻿using System;
-using RollTheDie.Domain.Interface;
+using RollTheDie.Domain.Entities;
 
-public class CharacterAttributeRepository : ICharacterRepository
+public class CharacterAttributeRepository : ICharacterAttribute
 {
     private readonly List<CharacterAttribute> _characterAttribute = new();
 

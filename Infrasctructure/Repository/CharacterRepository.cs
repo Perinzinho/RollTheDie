@@ -1,5 +1,5 @@
 ﻿using System;
-using RollTheDie.Domain.Interface;
+using RollTheDie.Domain.Entities;
 
 public class CharacterRepository : ICharacter
 {
@@ -26,7 +26,7 @@ public class CharacterRepository : ICharacter
 
         if(character != null)
         {
-            _campaign.Remove(campaign);
+            _character.Remove(character);
         }
     }
 }

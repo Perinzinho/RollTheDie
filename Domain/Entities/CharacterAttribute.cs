@@ -1,5 +1,5 @@
 ﻿using System;
-using RollTheDie.Domain.Enums;
+using RollTheDie.Domain;
 namespace RollTheDie.Domain.Entities
 {
 	public class CharacterAttribute
@@ -20,7 +20,7 @@ namespace RollTheDie.Domain.Entities
 		public Classe Classe { get; set; }
 		public Trilha Trilha {  get; set; }
 
-		public ClassAttribute(Guid characterId, int forca, int agilidade, int intelecto, int vigor, int vida, int sanidade, int esforco, int determinacao, int defesa, int nex, Classe classe, Trilha trilha)
+		public CharacterAttribute(Guid characterId, int forca, int agilidade, int intelecto, int vigor, int vida, int sanidade, int esforco, int determinacao, int defesa, int nex, Classe classe, Trilha trilha)
 		{
 			CharacterId = characterId;
 			Forca=forca;
@@ -28,7 +28,7 @@ namespace RollTheDie.Domain.Entities
 			Intelecto= intelecto;
 			Vigor = vigor;
 			Vida = vida;
-			Saniadde= sanidade;
+			Sanidade= sanidade;
 			Esforco= esforco;
 			Defesa= defesa;
 			NEX= nex;

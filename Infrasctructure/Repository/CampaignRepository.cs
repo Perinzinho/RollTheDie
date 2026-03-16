@@ -1,5 +1,5 @@
 ﻿using System;
-using RollTheDie.Domain.Interface;
+using RollTheDie.Domain.Entities;
 
 public class CampaignRepository : ICampaign
 {
