@@ -5,17 +5,17 @@ public class CharacterRepository : ICharacter
 {
     private readonly List<Character> _character = new();
 
-    public void Create(Character character)
+    public async Task Create(Character character)
     {
         _character.Add(character);
     }
 
-    public Character GetCharacterById(Guid id)
+    public async Task<Character?> GetCharacterById(Guid id)
     {
         return _character.FirstOrDefault(p => p.Id == id);
     }
 
-    public List<Character> GetAll()
+    public async Task <List<Character>> GetAll()
     {
         return _character.OrderBy(p => p.Id).ToList();
     }
