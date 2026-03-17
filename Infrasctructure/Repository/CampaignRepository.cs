@@ -22,11 +22,12 @@ public class CampaignRepository : ICampaign
 
     public async Task Delete(Guid id)
     {
-        var campaign = GetCampaigntById(id);
+        var campaign = await GetCampaigntById(id);
 
         if(campaign != null)
         {
             _campaign.Remove(campaign);
         }
+       
     }
 }

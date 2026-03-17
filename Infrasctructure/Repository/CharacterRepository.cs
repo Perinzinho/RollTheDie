@@ -20,9 +20,9 @@ public class CharacterRepository : ICharacter
         return _character.OrderBy(p => p.Id).ToList();
     }
 
-    public void Delete(Guid id)
+    public async Task Delete(Guid id)
     {
-        var character = GetCharacterById(id);
+        var character = await GetCharacterById(id);
 
         if(character != null)
         {

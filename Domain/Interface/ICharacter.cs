@@ -3,8 +3,8 @@ using RollTheDie.Domain.Entities;
 
 public interface ICharacter
 {
-    void Create(Character character);
-    Character GetCharacterById(Guid id);
-    List<Character> GetAll();
-    void Delete(Guid id);
+    Task Create(Character character);
+    Task<Character?> GetCharacterById(Guid id);
+    Task<List<Character>> GetAll();
+    Task Delete(Guid id);
 }
