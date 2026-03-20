@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Http.HttpResults;
 using RollTheDie.Domain.Entities;
 using RollTheDie.Domain.Interfaces;
 
@@ -17,8 +18,8 @@ public class CharacterAttributeRepository : ICharacterAttributeRepository
     }
 
     public async Task Update(CharacterAttribute characterAttribute)
-    {
-        
+    {//Implementar mais tarde, muito complicado     
+
 
     }
     public async Task Delete(Guid id)
