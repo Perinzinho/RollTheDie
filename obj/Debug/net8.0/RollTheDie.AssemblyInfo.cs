@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RollTheDie")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ce91a6d03b17b485853c57914be4e6716075ad4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f962a523864e39530170da58e66f8f697afda68")]
 [assembly: System.Reflection.AssemblyProductAttribute("RollTheDie")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RollTheDie")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

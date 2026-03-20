@@ -5,11 +5,10 @@ using RollTheDie.Domain.Interfaces;
 public class CharacterAttributeRepository : ICharacterAttributeRepository
 {
     private readonly List<CharacterAttribute> _characterAttribute = new();
-    private readonly List<Character> _character = new();
 
-    public async Task<Character?> GetByCharacterId(Guid id)
+    public async Task<CharacterAttribute?> GetByCharacterId(Guid id)
     {
-        return _character.FirstOrDefault(p => p.Id == id);
+        return _characterAttribute.FirstOrDefault(p => p.CharacterId == id);
     }
 
     public async Task Create(CharacterAttribute characterAttribute)
@@ -28,7 +27,8 @@ public class CharacterAttributeRepository : ICharacterAttributeRepository
 
         if (character != null)
         {
-            _character.Remove(character);
+            _characterAttribute.Remove(character);
         }
+        
     }
 }
