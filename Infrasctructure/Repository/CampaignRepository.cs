@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Http.HttpResults;
 using RollTheDie.Domain.Entities;
 
 public class CampaignRepository : ICampaign
