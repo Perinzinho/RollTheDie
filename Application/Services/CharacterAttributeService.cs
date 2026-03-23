@@ -25,6 +25,16 @@ namespace RollTheDie.Application.Services
 
         public async Task Create(CharacterAttribute characterAttribute)
         {
+
+            if(characterAttribute.NEX<0 || characterAttribute.NEX > 99)
+            {
+                throw new Exception("NEX não pode ser menor que 0% ou maior que 99%");
+            }
+
+            if(characterAttribute.NEX % 5 != 0)
+            {
+                throw new Exception("NEX deve ser de 5 em 5%!");
+            }
             await _characterAttribute.Create(characterAttribute);
 
             //ver as regras do sistema para criação de personagem

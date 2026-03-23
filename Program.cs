@@ -4,34 +4,30 @@ using RollTheDie.Domain.Interfaces;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Campanha
+// Campanha
 builder.Services.AddSingleton<CampaignService>();
 builder.Services.AddSingleton<ICampaign, CampaignRepository>();
 
-//Personagem
+// Personagem
 builder.Services.AddSingleton<CharacterService>();
 builder.Services.AddSingleton<ICharacter, CharacterRepository>();
 
-//Atributos
+// Atributos
 builder.Services.AddSingleton<CharacterAttributeService>();
 builder.Services.AddSingleton<ICharacterAttributeRepository, CharacterAttributeRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Ativa Swagger sempre
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+// Comenta isso por enquanto para evitar problema de HTTPS
+// app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

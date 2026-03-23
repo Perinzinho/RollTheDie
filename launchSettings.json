@@ -1,0 +1,15 @@
+{
+    "profiles": {
+        "API": {
+            "commandName": "RollTheDie",
+            "dotnetRunMessages": true,
+            "launchBrowser": true,
+            "launchUrl": "swagger",
+            "applicationUrl": "http://localhost:5056, https://localhost:5000",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+
+        }
+    }
+}

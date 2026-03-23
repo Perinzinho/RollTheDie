@@ -15,7 +15,7 @@ namespace RollTheDie.Domain.Entities
 		public int Esforco { get; set; }
 		public int Determinacao { get; set; }
 		public int Defesa { get; set; }
-		public int NEX {  get; set; }
+		public int NEX { get; set; }
 
 		public Classe Classe { get; set; }
 		public Trilha Trilha {  get; set; }
