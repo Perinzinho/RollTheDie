@@ -10,10 +10,9 @@ namespace RollTheDie.Domain.Entities
         public string Backstory { get; set; }
         public string Personality { get; set; }
         public bool IsNPC { get; set; }
-        public Guid CampaignId { get; set; }
-        public Campaign Campaign { get; set; }
+        public Guid? CampaignId { get; set; }
 
-        public Character(string firstName, string lastName, string backstory, string personality, bool isNPC, Guid campaignId, Campaign campaign)
+        public Character(string firstName, string lastName, string backstory, string personality, bool isNPC, Guid? campaignId)
         {
             Id = Guid.NewGuid();
             FirstName = firstName;
@@ -22,7 +21,6 @@ namespace RollTheDie.Domain.Entities
             Personality = personality;
             IsNPC = isNPC;
             CampaignId = campaignId;
-            Campaign = campaign;
         }
     }
 }

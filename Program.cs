@@ -9,8 +9,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Campanha
 builder.Services.AddSingleton<CampaignService>();
 builder.Services.AddSingleton<ICampaign, CampaignRepository>();
+
+builder.Services.AddSingleton<CharacterService>();
+builder.Services.AddSingleton<ICharacter, CharacterRepository>();
 
 var app = builder.Build();
 
