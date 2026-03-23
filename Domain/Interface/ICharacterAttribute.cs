@@ -4,6 +4,7 @@ namespace RollTheDie.Domain.Interfaces
 {
     public interface ICharacterAttributeRepository
     {//Porquê aqui é categorizado como task?
+        //Faltou GetAll, PRECISA FAZER
         Task<CharacterAttribute?> GetByCharacterId(Guid characterId);
 
         Task Create(CharacterAttribute attributes);
