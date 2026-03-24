@@ -58,6 +58,7 @@ namespace RollTheDie.Application.Services
             }
 
             await _characterAttribute.Delete(id);
+            await _character.Delete(id);
 
 
 
