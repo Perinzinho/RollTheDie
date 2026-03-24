@@ -7,10 +7,12 @@ namespace RollTheDie.Application.Services
     {
 
         private readonly ICharacterAttributeRepository _characterAttribute;
+        private readonly ICharacter _character;
 
-        public CharacterAttributeService(ICharacterAttributeRepository characterAttribute)
+        public CharacterAttributeService(ICharacterAttributeRepository characterAttribute, ICharacter character)
         {
             _characterAttribute = characterAttribute;
+            _character = character;
         }
 
         public async Task<CharacterAttribute?> GetByCharacterId(Guid id)
@@ -25,6 +27,12 @@ namespace RollTheDie.Application.Services
 
         public async Task Create(CharacterAttribute characterAttribute)
         {
+            var characterId= await _character.GetCharacterById(characterAttribute.CharacterId);
+            if (characterId == null)
+            {
+                throw new Exception("Personagem não existe");
+            }
+            
 
             if(characterAttribute.NEX<0 || characterAttribute.NEX > 99)
             {
