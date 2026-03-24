@@ -22,11 +22,10 @@ builder.Services.AddSingleton<ICharacterAttributeRepository, CharacterAttributeR
 
 var app = builder.Build();
 
-// Ativa Swagger sempre
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// Comenta isso por enquanto para evitar problema de HTTPS
 // app.UseHttpsRedirection();
 
 app.UseAuthorization();

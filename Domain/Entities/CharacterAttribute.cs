@@ -9,31 +9,43 @@ namespace RollTheDie.Domain.Entities
 		public int Agilidade { get; set; }
 		public int Intelecto { get; set; }
 		public int Vigor {  get; set; }
+		public int Presenca{get;  set; }
 
-		public int Vida {  get; set; }
-		public int Sanidade {  get; set; }
-		public int Esforco { get; set; }
-		public int Determinacao { get; set; }
-		public int Defesa { get; set; }
+		public int Vida  {  get;  private set; }
+		public int vidaAtual {  get;  set; }
+		
+		public int Sanidade {  get; private set; }
+		public int SanidadeAtual {  get;  set; }
+		
+		public int Esforco { get; private set; }
+		public int EsforcoAtual {  get;  set; }
+		
+		public int Determinacao { get; private set; }
+		public int DeterminacaoAtual {  get;  set; }
+		
+		public int Defesa { get; private set; }
 		public int NEX { get; set; }
 
 		public Classe Classe { get; set; }
 		public Trilha Trilha {  get; set; }
 
-		public CharacterAttribute(Guid characterId, int forca, int agilidade, int intelecto, int vigor, int vida, int sanidade, int esforco, int determinacao, int defesa, int nex, Classe classe, Trilha trilha)
+		public CharacterAttribute(Guid characterId, int forca, int agilidade, int intelecto, int vigor,int presenca, int defesa, int nex, Classe classe, Trilha trilha)
 		{
 			CharacterId = characterId;
 			Forca=forca;
 			Agilidade = agilidade;
 			Intelecto= intelecto;
 			Vigor = vigor;
-			Vida = vida;
-			Sanidade= sanidade;
-			Esforco= esforco;
+			Presenca = presenca;
+			vidaAtual = Vida;
+			SanidadeAtual= Sanidade;
+			EsforcoAtual= Esforco;
+			DeterminacaoAtual= Determinacao;
 			Defesa= defesa;
 			NEX= nex;
 			Classe= classe;
 			Trilha= trilha;
 		}
+		
 	}
 }
